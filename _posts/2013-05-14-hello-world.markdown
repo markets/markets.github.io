@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ./markets - Hello world!
+title:  Hello world!
 date:   2013-05-14
 ---
 

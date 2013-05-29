@@ -132,6 +132,15 @@ footer a:hover {
   text-shadow: white 0px 0px 2px;
 }
 
+footer .column {
+  float: left;
+  width: 50%;
+}
+
+.alignleft { text-align: left; }
+.alignright { text-align: right; }
+.aligncenter { text-align: center; }
+
 em {
   font-style: italic;
 }

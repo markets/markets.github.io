@@ -271,7 +271,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 35px 10px 30px 10px;
+  padding: 35px 10px 10px 10px;
 }
 
 .main_header {
@@ -302,12 +302,11 @@ Full-Width Styles
 
 #footer_wrap {
   background: #212121;
-  text-align: center;
 }
 
 /* Menu */
 ul.menu li {
-  float: left;
+  display: inline-block;
   padding-right: 20px;
   font-size: 18px;
   border-right: 1px solid;

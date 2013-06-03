@@ -95,51 +95,38 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #007edf;
-  text-shadow: none;
+}
 
-  transition: color 0.5s ease;
-  transition: text-shadow 0.5s ease;
-  -webkit-transition: color 0.5s ease;
-  -webkit-transition: text-shadow 0.5s ease;
-  -moz-transition: color 0.5s ease;
-  -moz-transition: text-shadow 0.5s ease;
-  -o-transition: color 0.5s ease;
-  -o-transition: text-shadow 0.5s ease;
-  -ms-transition: color 0.5s ease;
-  -ms-transition: text-shadow 0.5s ease;
+#main_content a {
+  color: #007edf;  
 }
 
 #main_content a:hover {
-  color: #0069ba;
-  text-shadow: #0090ff 0px 0px 2px;
+  text-decoration: underline;
 }
 
 header a {
   color: white;
+  padding-bottom: 2px;
 }
 
-header a:hover {
-  text-shadow: white 0px 0px 10px;
+ul.menu a:hover {
+  border-bottom: 1px solid
 }
 
 footer a {
   color: white;
-  text-decoration: underline;
 }
 
 footer a:hover {
-  text-shadow: white 0px 0px 2px;
-}
-
-footer .column {
-  float: left;
-  width: 50%;
+  text-decoration: underline;
 }
 
 .alignleft { text-align: left; }
 .alignright { text-align: right; }
 .aligncenter { text-align: center; }
+.pullleft { float: left; }
+.pullright { float: right; }
 
 em {
   font-style: italic;
@@ -284,20 +271,20 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 35px 10px 30px 10px;
 }
 
-#project_title {
+.main_header {
   margin: 0;
   color: #fff;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
 
-#project_tagline {
+.tagline {
   color: #fff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
@@ -310,18 +297,32 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+  padding-top: 25px;
 }
 
 #footer_wrap {
   background: #212121;
+  text-align: center;
+}
+
+/* Menu */
+ul.menu li {
+  float: left;
+  padding-right: 20px;
+  font-size: 18px;
+  border-right: 1px solid;
+  color: white; 
+}
+
+ul.menu li.last {
+  border-right: none;
 }
 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
   body {
     font-size:14px;
   }
@@ -363,5 +364,14 @@ Small Device Styles
     min-width: 320px;
     max-width: 480px;
     font-size: 11px;
+  }
+
+  ul.menu li {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .tagline {
+    display: none;
   }
 }

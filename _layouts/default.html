@@ -17,8 +17,15 @@
   <!-- HEADER -->
   <div id="header_wrap" class="outer">
     <header class="inner">
-      <h1 id="project_title"><a href="/">./{{ site.name | downcase }}</a></h1>
-      <h2 id="project_tagline">Software & Web development</h2>
+      <h1 class="main_header">
+        <a class="main" href="/" title="Home">./{{ site.name | downcase }}</a>
+        <span class="tagline">Software & Web development</span>
+      </h1>
+      <ul class='menu'>
+        <li><a href="/about.html" title="About me">About me</a></li>
+        <li><a href="/blog/index.html" title="Blog">Blog</a></li>
+        <li class="last"><a href="/contact.html" title="Contact me">Contact me</a></li>
+      </ul>
     </header>
   </div>
 
@@ -32,18 +39,8 @@
   <!-- FOOTER  -->
   <div id="footer_wrap" class="outer">
     <footer class="inner">
-      <div class="column">
-        <p>
-          Marc Anguera Insa<br />
-          Developer
-        </p>
-      </div>
-      <div class="column alignright">
-        <p>
-          <a href="mailto:srmarc.ai@gmail.com">srmarc.ai@gmail.com</a><br />
-          <a href="http://github.com/markets">github.com/markets</a>
-        </p>
-      </div>
+      <p>&copy; 2013 Marc Anguera Insa <a href="mailto:srmarc.ai@gmail.com">srmarc.ai@gmail.com</a></p>
+      <p>Hosted by <a href="https://github.com">GitHub</a> - Powered by <a href="http://jekyllrb.com/">Jekyll</a></p>
     </footer>
   </div>
 

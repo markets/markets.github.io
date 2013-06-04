@@ -1,5 +1,4 @@
 name:         Markets
 pygments:     true
-host:         0.0.0.0
-port:         4000
 analytics:    UA-41006145-1
+permalink:    /blog/:year/:month/:day/:title

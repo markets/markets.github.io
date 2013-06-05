@@ -4,7 +4,7 @@ title:  Introducing Unscoped Associations
 date:   2013-06-04
 ---
 
-Ruby on Rails is a great framework which a lot of interesting options. One of them is the ability to collect instances of a particular class using `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected.
+Ruby on Rails is a great framework with a lot of interesting options. One of them is the ability to collect instances of a particular class using `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected.
 
 It may be that you've ever needed to skip the `default_scope` (for some strange reasons). This library allows you to do this easily.
 
@@ -13,7 +13,7 @@ Supported associations:
 * `:has_one`
 * `:has_many`
 
-More information [here](https://github.com/markets/unscoped_associations).
+More information and source [here](https://github.com/markets/unscoped_associations).
 
 ### Installation
 Add this line to you Gemfile:
@@ -23,7 +23,7 @@ gem 'unscoped_associations'
 ```
 
 ### Scenario usage
-Basic usage example:
+From now you are allowed to use `:unscoped` option for your association definitions. Basic usage example:
 
 {% highlight ruby %}
 class User < ActiveRecord::Base
@@ -48,5 +48,7 @@ end
 @user.last_comment # => return last comment skipping default_scope
 
 @topic.user # => return user w/o taking account 'active' flag
-
 {% endhighlight %}
+
+### Contributing
+Feel free to fork, send ideas, [bugs](https://github.com/markets/unscoped_associations/issues) or any comment.

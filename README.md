@@ -1,4 +1,3 @@
-markets.github.io
-=================
+# Personal site and blog
 
-Visit [me](http://markets.github.io).
+Visit [me](http://marcanguera.net)

@@ -16,7 +16,7 @@ Supported associations:
 More information and source [here](https://github.com/markets/unscoped_associations).
 
 ### Installation
-Add this line to you Gemfile:
+Add this line to your Gemfile:
 
 ```
 gem 'unscoped_associations'
@@ -49,6 +49,9 @@ end
 
 @topic.user # => return user w/o taking account 'active' flag
 {% endhighlight %}
+
+### Status
+Tested on Rails 3.x series. In Rails 4 you are able to customize data retrieving via a scope block, so you can skip default_scope using a block.
 
 ### Contributing
 Feel free to fork, send ideas, [bugs](https://github.com/markets/unscoped_associations/issues) or any comment.

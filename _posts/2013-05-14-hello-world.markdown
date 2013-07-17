@@ -4,7 +4,17 @@ title:  Hello world!
 date:   2013-05-14
 ---
 
-So easy with <a href="http://www.ruby-lang.org" target="_blank">Ruby</a>.
+For a long time I wanted to have a personal site and blog. One day surfing on Internet I found Jekyll and offers me everything that I need in a simple and easy way: static pages generator (html, js and css), blogging system (posts, categories, etc), generate content using Markdown, templates and layouts engine, GitHub Pages integration, customization and a lot of interesting stuff.
+
+Especially, I would highlight the simplicity to deploy the site. In case of use GitHub Pages (more <a href="http://pages.github.com/" target="_blank">information</a>) as HTTP server, commit your changes, push it to your repository and that's it. If you are using any other hosting, just build the site (with a given task: `jekyll build`) and upload generated files to your server.
+
+When you are in development mode, you can run the site (task: `jekyll serve`) locally. By default is served by WEBrick, a Ruby HTTP web server.
+
+Another important point is the community behind the framework. Some people contribute directly to the core, other people implementing extensions via plugins. There is already a considerable list of them.
+
+Check full documentation in <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> page.
+
+To end first post I greet from one of my favorite languages: <a href="http://www.ruby-lang.org" target="_blank">Ruby</a>. Also in an easy way :)
 
 {% highlight ruby %}
 puts 'Hello World!'

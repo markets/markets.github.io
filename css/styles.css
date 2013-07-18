@@ -89,44 +89,9 @@ p {
   margin: 10px 0 15px 0;
 }
 
-footer p {
-  color: #f2f2f2;
-}
-
 a {
   text-decoration: none;
 }
-
-#main_content a {
-  color: #007edf;  
-}
-
-#main_content a:hover {
-  text-decoration: underline;
-}
-
-header a {
-  color: white;
-  padding-bottom: 2px;
-}
-
-ul.menu a:hover {
-  border-bottom: 1px solid
-}
-
-footer a {
-  color: white;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.alignleft { text-align: left; }
-.alignright { text-align: right; }
-.aligncenter { text-align: center; }
-.pullleft { float: left; }
-.pullright { float: right; }
 
 em {
   font-style: italic;
@@ -252,8 +217,47 @@ img {
 }
 
 /*******************************************************************************
+Custom classes
+*******************************************************************************/
+
+.alignleft { text-align: left; }
+.alignright { text-align: right; }
+.aligncenter { text-align: center; }
+.pullleft { float: left; }
+.pullright { float: right; }
+
+/*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
+
+#main_content a {
+  color: #007edf;
+}
+
+#main_content a:hover {
+  text-decoration: underline;
+}
+
+header a {
+  color: white;
+  padding-bottom: 2px;
+}
+
+ul.menu a:hover {
+  border-bottom: 1px solid
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  color: #f2f2f2;
+}
 
 .outer {
   width: 100%;
@@ -277,17 +281,18 @@ Full-Width Styles
 .main_header {
   margin: 0;
   color: #fff;
-  font-size: 46px;
+  font-size: 44px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
 
 .tagline {
   color: #fff;
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 300;
   background: none;
   text-shadow: #111 0px 0px 10px;
+  display: block;
 }
 
 #main_content_wrap {
@@ -304,7 +309,6 @@ Full-Width Styles
   background: #212121;
 }
 
-/* Menu */
 ul.menu li {
   display: inline-block;
   padding-right: 20px;
@@ -329,10 +333,6 @@ Small Device Styles
   .inner {
     min-width: 320px;
     max-width: 480px;
-  }
-
-  #project_title {
-    font-size: 32px;
   }
 
   h1 {
@@ -365,12 +365,16 @@ Small Device Styles
     font-size: 11px;
   }
 
-  ul.menu li {
-    padding-right: 10px;
-    padding-left: 10px;
+  .main_header {
+    font-size: 34px;
   }
 
   .tagline {
-    display: none;
+    font-size: 18px;
+  }
+
+  ul.menu li {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }

@@ -6,7 +6,7 @@ date:   2013-06-04
 
 Ruby on Rails is a great framework with a lot of interesting options. One of them is the ability to collect instances of a particular class using `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected.
 
-It may be that you've ever needed to skip the `default_scope` (for some strange reasons). This library allows you to do this easily.
+It may be that you've ever needed to skip the `default_scope` (for some strange reasons). This library allows you to do it easily.
 
 Supported associations:
 * `:belongs_to`
@@ -23,7 +23,7 @@ gem 'unscoped_associations'
 ```
 
 ### Scenario usage
-From now you are allowed to use `:unscoped` option for your association definitions. Basic usage example:
+From now on you are able to use `:unscoped` option for your association definitions. Basic usage example:
 
 {% highlight ruby %}
 class User < ActiveRecord::Base
@@ -51,7 +51,7 @@ end
 {% endhighlight %}
 
 ### Status
-Tested on Rails 3.x series. In Rails 4 you are able to customize data retrieving via a scope block, so you can skip default_scope using a block.
+Tested on Rails 3.x series. In Rails 4 you can customize data retrieving via a scope block, so you can skip default_scope using a block.
 
 ### Contributing
 Feel free to fork, send ideas, [bugs](https://github.com/markets/unscoped_associations/issues) or any comment.

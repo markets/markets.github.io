@@ -8,7 +8,7 @@ Custom and simple implementation of `timeago` date filter. Futures are also supp
 
 In fact, `jekyll-timeago` is an extension of <a href="https://github.com/Shopify/liquid" target="_blank">Liquid</a> filters, so you can use it in all your Liquid templates. Liquid is markup language extracted from the e-commerce platform <a href="http://www.shopify.com/" target="_blank">Shopify</a>.
 
-Source code and bug tracking <a href="https://github.com/markets/jekyll-timeago" target="_blank">here</a>.
+Source code, bug tracking and updates <a href="https://github.com/markets/jekyll-timeago" target="_blank">here</a>.
 
 ### Installation
 Add this gem to your `Gemfile` and run `bundle`:
@@ -72,9 +72,9 @@ You can modify the level of detail to get higher or lower granularity:
 > timeago(Date.today - 500.days) # default
 => "1 year ago and 4 months ago"
 > timeago(Date.today - 500.days, 3)
-=> "1 year and 4 months and 1 week ago"
+=> "1 year, 4 months and 1 week ago"
 > timeago(Date.today - 500.days, 4)
-=> "1 year and 4 months and 1 week and 4 days ago"
+=> "1 year, 4 months, 1 week and 4 days ago"
 > timeago(Date.today - 500.days, 1)
 => "1 year ago"
 {% endhighlight %}

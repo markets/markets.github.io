@@ -13,7 +13,7 @@ Supported associations:
 * `:has_one`
 * `:has_many`
 
-More information and source [here](https://github.com/markets/unscoped_associations).
+More information, source and follow up [here](https://github.com/markets/unscoped_associations).
 
 ### Installation
 Add this line to your Gemfile:
@@ -23,7 +23,7 @@ gem 'unscoped_associations'
 ```
 
 ### Scenario usage
-From now on you are able to use `:unscoped` option for your association definitions. Basic usage example:
+From now on you are able to use `unscoped` option in your association definitions. Basic usage example:
 
 {% highlight ruby %}
 class User < ActiveRecord::Base
@@ -46,12 +46,21 @@ end
 @user.comments # => return public comments
 @user.all_comments # => return all comments skipping default_scope
 @user.last_comment # => return last comment skipping default_scope
-
-@topic.user # => return user w/o taking account 'active' flag
+@comment.user # => return user w/o taking account 'active' flag
 {% endhighlight %}
 
 ### Status
-Tested on Rails 3.x series. In Rails 4 you can customize data retrieving via a scope block, so you can skip default_scope using a block.
+Tested on Rails 3.x series and Rails 4.0.0. Originally thought and built for Rails 3, Rails 4 supported.
+
+NOTE: Rails 4 introduces some updates (and more planned for upcoming releases) related to this part. For example, in Rails 4, you are able to customize associations using a scope block, so you can skip `default_scope`:
+
+{% highlight ruby %}
+class User < ActiveRecord::Base
+  has_many :all_comments, -> { where public: [true, flase] }, class_name: 'Comment'
+end
+{% endhighlight %}
+
+Anyway, you can use `unscoped` option, if you prefer.
 
 ### Contributing
 Feel free to fork, send ideas, [bugs](https://github.com/markets/unscoped_associations/issues) or any comment.

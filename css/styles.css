@@ -39,8 +39,8 @@ a:focus {
 
 body {
   box-sizing: border-box;
-  color: #020659;
-  background: #020659;
+  color: #112d4e;
+  background: #112d4e;
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -100,7 +100,7 @@ strong {
 
 pre, code {
   width: 100%;
-  color: #020659;
+  color: #112d4e;
   background-color: #fff;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
@@ -189,7 +189,7 @@ img {
 }
 
 #main_content a {
-  color: #020659;
+  color: #112d4e;
   font-weight: bold;
 }
 
@@ -226,7 +226,7 @@ footer p {
 }
 
 #header_wrap {
-  background: #020659;
+  background: #112d4e;
   color: white;
 }
 
@@ -251,7 +251,7 @@ footer p {
 }
 
 #footer_wrap {
-  background: #020659;
+  background: #112d4e;
   text-align: center;
 }
 

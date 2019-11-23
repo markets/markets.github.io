@@ -1,5 +1,4 @@
 name:           Marc Anguera Insa
 highlighter:    rouge
 analytics:      UA-41006145-1
-production_url: http://marcanguera.net
 permalink:      /blog/:year/:month/:day/:title

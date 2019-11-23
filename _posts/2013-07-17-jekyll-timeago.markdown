@@ -15,6 +15,7 @@ In fact, `jekyll-timeago` is an extension of <a href="https://github.com/Shopify
 Source code, bug tracking and updates <a href="https://github.com/markets/jekyll-timeago" target="_blank">here</a>.
 
 ### Installation
+
 You have 3 options for installing the plugin:
 
 **Via Jekyll plugin system**
@@ -44,6 +45,7 @@ require 'jekyll/timeago'
 Alternatively, you can simply copy [this file](https://github.com/markets/jekyll-timeago/blob/master/lib/jekyll/timeago.rb) directly into your `_plugins/` directory! :)
 
 ### Usage
+
 Example usage:
 
 {% highlight html %}
@@ -65,6 +67,7 @@ You are able to personalize the level of detail (from 1 up to 4, 2 by default) b
 {% endhighlight %}
 
 ## Localization
+
 The plugin allows you to modify the strings needed to build the time ago sentences. For do this, you must add some extra keys to your `_config.yml`. You can simply copy them from [this example file](https://github.com/markets/jekyll-timeago/blob/master/_config.yml.example) and translate it to your site's language. Sample:
 
 {% highlight yaml %}
@@ -88,7 +91,9 @@ jekyll_timeago:
 {% endhighlight %}
 
 ## Output Examples
+
 Default behavior:
+
 {% highlight ruby %}
 > timeago(Date.today)
 => "today"
@@ -109,6 +114,7 @@ Default behavior:
 {% endhighlight %}
 
 You can modify the level of detail to get higher or lower granularity:
+
 {% highlight ruby %}
 > timeago(Date.today - 500.days) # default
 => "1 year and 4 months ago"
@@ -121,4 +127,5 @@ You can modify the level of detail to get higher or lower granularity:
 {% endhighlight %}
 
 ### Contributing
-Any kind of idea, bug or comment are welcome.
+
+Any kind of idea, bug or comment are welcome. Please, follow up in [GitHub](https://github.com/markets/unscoped_associations)

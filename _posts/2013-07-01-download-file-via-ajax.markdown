@@ -7,12 +7,15 @@ date:   2013-07-01
 Everything retrieved via Ajax goes into javascript "memory" space. This is because JavaScript cannot interact with disk. That would be a security issue. Ajax is not designed to do this kind of stuff. But as always, there are some tricks ... Here is a simple approach of how to get it in a Ruby on Rails based application.
 
 ### Scenario
+
 Imagine a plugin embeded in a web page that provides a Base64 image encoded. This image should be generated and stored in the server side and then perform an automatic download.
 
 ### Tech Context
+
 Back-end: Ruby on Rails. Front-end: Jquery.
 
 ### Solution
+
 Use two methods (actions) in your controllers layer. The first one receives the image (a string representing Base64 codification), decodes this string and writes it into filesystem:
 
 {% highlight ruby %}
@@ -48,7 +51,7 @@ function downloadImageBase64(image) {
     url: '/images',
     data: { base64_string: image },
     success: function(response){
-      document.location.href = '/images/download?image_basename=' + 
+      document.location.href = '/images/download?image_basename=' +
                                response.image_basename;
     }
   });

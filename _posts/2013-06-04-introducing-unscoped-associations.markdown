@@ -4,9 +4,9 @@ title:  Introducing Unscoped Associations
 date:   2013-06-04
 ---
 
-Ruby on Rails is a great framework with a lot of interesting options. One of them is the ability to collect instances of a particular class using `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected.
+Ruby on Rails is a great framework with a lot of built-in options and customizations. One of them is the ability to collect instances of a particular class using `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected.
 
-It may be that you've ever needed to skip the `default_scope` (for some strange reasons). This library allows you to do it easily.
+Have you ever needed to skip (for some strange reasons) the `default_scope`? This library allows you to do it easily.
 
 Supported associations:
 * `:belongs_to`
@@ -16,6 +16,7 @@ Supported associations:
 More information, source and follow up [here](https://github.com/markets/unscoped_associations).
 
 ### Installation
+
 Add this line to your Gemfile:
 
 ```
@@ -23,6 +24,7 @@ gem 'unscoped_associations'
 ```
 
 ### Scenario usage
+
 From now on you are able to use `unscoped` option in your association definitions. Basic usage example:
 
 {% highlight ruby %}
@@ -50,6 +52,7 @@ end
 {% endhighlight %}
 
 ### Status
+
 Tested on Rails 3.x series and Rails 4.0.0. Originally thought and built for Rails 3, Rails 4 supported.
 
 NOTE: Rails 4 introduces some updates (and more planned for upcoming releases) related to this part. For example, in Rails 4, you are able to customize associations using a scope block, so you can skip `default_scope`:
@@ -63,4 +66,5 @@ end
 Anyway, you can use `unscoped` option, if you prefer.
 
 ### Contributing
+
 Feel free to fork, send ideas, [bugs](https://github.com/markets/unscoped_associations/issues) or any comment.

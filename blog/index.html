@@ -5,8 +5,9 @@ title: Blog - Marc Anguera Insa
 
 <h2>Blog</h2>
 
-<p>Sometimes I try to write nice posts...</p>
-
 {% for post in site.posts %}
-  <p>{{ post.date | date: "%d/%m/%Y" }}  =>  <a href="{{ post.url }}">{{ post.title }}</a></p>
+  <h4><a href="{{ post.url }}"> {{ post.title }}</a></h4>
+  <small>{{ post.date | date: "%b %Y" }}</small>
+
+  <p>{{ post.excerpt }}</p>
 {% endfor %}

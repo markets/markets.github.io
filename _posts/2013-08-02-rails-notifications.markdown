@@ -9,6 +9,7 @@ We'll all agree that it is very useful to know how our application is performing
 More or less this mechanism works in the following way: given a code block, when the block finishes, an event is triggered to notify any report that is subscribed to it.
 
 ### In action
+
 To take a first look, we're going to print all notifications into the log file. We just need to subscribe to all notifications. For do this, add this piece of code to an initializer (/config/initializers/notifications.rb):
 
 {% highlight ruby %}
@@ -22,7 +23,7 @@ Restart the server and make a request. We'll see those lines in the application 
 {% highlight bash %}
 [NOTIFICATION] start_processing.action_controller
   2013-08-01 20:10:45 +0200 2013-08-01 20:10:45 +0200
-  { 
+  {
     :controller=>"TopicsController", :action=>"index",
     :params=>{"action"=>"index", "controller"=>"topics"},
     :format=>:html, :method=>"GET", :path=>"/topics"
@@ -46,7 +47,7 @@ Restart the server and make a request. We'll see those lines in the application 
   {
     :controller=>"TopicsController", :action=>"index",
     :params=>{"action"=>"index", "controller"=>"topics"},
-    :format=>:html, :method=>"GET", :path=>"/topics", :status=>200, 
+    :format=>:html, :method=>"GET", :path=>"/topics", :status=>200,
     :view_runtime=>121.30655800000001, :db_runtime=>1.2731360000000003
   }
 {% endhighlight %}
@@ -73,9 +74,9 @@ Another interesting idea would be to store notifications into our database in or
 # Assume Notification is an ActiveRecord class.
 ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
   notification_params = {
-    name: name, 
-    start: start, 
-    finish: finish, 
+    name: name,
+    start: start,
+    finish: finish,
     payload: payload
   }
   Notification.create(notification_params)
@@ -85,6 +86,7 @@ end
 We can implement a more complex solutions. For example: store data to Memcached or Redis, and bulk it into a persisted storage periodically. Any good idea across your mind.
 
 ### Create custom notifications
+
 We can create our own notifications and subscribe to them as well. For example:
 
 {% highlight ruby %}
@@ -100,6 +102,7 @@ end
 {% endhighlight %}
 
 ### Final words
-There are some professional and well known tools to monitor our applications in production environment, like [RPM New Relic](http://newrelic.com), [Librato Metrics](https://metrics.librato.com/), [Riemann](http://riemann.io/). Totally Right, full solutions and very liked, but this API helps us to build for example: a custom case study, a custom logging, a self-made usage statistics, alerting, etc. Cool!   
+
+There are some professional and well known tools to monitor our applications in production environment, like [RPM New Relic](https://newrelic.com), [Librato Metrics](https://metrics.librato.com/), [Riemann](https://riemann.io/). Totally Right, full solutions and very liked, but this API helps us to build for example: a custom case study, a custom logging, a self-made usage statistics, alerting, etc. Cool!
 
 Be sure to check out the official [documentation](http://api.rubyonrails.org/classes/ActiveSupport/Notifications.html) for further information.

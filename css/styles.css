@@ -18,17 +18,14 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
 ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
+  list-style: square;
+  margin-left: 20px;
 }
 
 table {
@@ -42,8 +39,8 @@ a:focus {
 
 body {
   box-sizing: border-box;
-  color:#373737;
-  background: #212121;
+  color: #020659;
+  background: #020659;
   font-size: 16px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -51,22 +48,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 10px 0;
+  margin: 5px 0;
   font-weight: 700;
-  color:#222222;
   font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
   letter-spacing: -1px;
 }
 
 h1 {
   font-size: 36px;
-  font-weight: 700;
 }
 
 h2 {
-  padding-bottom: 10px;
   font-size: 32px;
-  background: url('../images/bg_hr.png') repeat-x bottom;
 }
 
 h3 {
@@ -89,6 +82,10 @@ p {
   margin: 10px 0 15px 0;
 }
 
+small {
+  font-size: 12px;
+}
+
 a {
   text-decoration: none;
 }
@@ -101,29 +98,12 @@ strong {
   font-weight: bold;
 }
 
-img {
-  position: relative;
-  margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
-  margin: 10px 0 10px 0;
-  border: 1px solid #ebebeb;
-
-  box-shadow: 0 0 5px #ebebeb;
-  -webkit-box-shadow: 0 0 5px #ebebeb;
-  -moz-box-shadow: 0 0 5px #ebebeb;
-  -o-box-shadow: 0 0 5px #ebebeb;
-  -ms-box-shadow: 0 0 5px #ebebeb;
-}
-
 pre, code {
   width: 100%;
-  color: #222;
+  color: #020659;
   background-color: #fff;
-
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
-
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -134,7 +114,6 @@ pre {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   overflow: auto;
-
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -162,10 +141,6 @@ ul, ol, dl {
   margin-bottom: 15px
 }
 
-ul li {
-  padding-left: 20px;
-}
-
 ol li {
   list-style: decimal inside;
   padding-left: 20px;
@@ -183,13 +158,6 @@ dl dd {
 dl p {
   padding-left: 20px;
   font-style: italic;
-}
-
-hr {
-  height: 1px;
-  margin-bottom: 5px;
-  border: none;
-  background: url('../images/bg_hr.png') repeat-x center;
 }
 
 table {
@@ -220,22 +188,9 @@ img {
   max-width: 100%;
 }
 
-/*******************************************************************************
-Custom classes
-*******************************************************************************/
-
-.alignleft { text-align: left; }
-.alignright { text-align: right; }
-.aligncenter { text-align: center; }
-.pullleft { float: left; }
-.pullright { float: right; }
-
-/*******************************************************************************
-Full-Width Styles
-*******************************************************************************/
-
 #main_content a {
-  color: #007edf;
+  color: #020659;
+  font-weight: bold;
 }
 
 #main_content a:hover {
@@ -245,10 +200,6 @@ Full-Width Styles
 header a {
   color: white;
   padding-bottom: 2px;
-}
-
-ul.menu a:hover {
-  border-bottom: 1px solid
 }
 
 footer a {
@@ -275,11 +226,8 @@ footer p {
 }
 
 #header_wrap {
-  background: #212121;
-}
-
-#header_wrap .inner {
-  padding: 35px 10px 10px 10px;
+  background: #020659;
+  color: white;
 }
 
 .main_header {
@@ -287,7 +235,6 @@ footer p {
   color: #fff;
   font-size: 44px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
 }
 
 .tagline {
@@ -295,40 +242,22 @@ footer p {
   font-size: 23px;
   font-weight: 300;
   background: none;
-  text-shadow: #111 0px 0px 10px;
   display: block;
 }
 
 #main_content_wrap {
   background: #f2f2f2;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
-}
-
-#main_content {
-  padding-top: 25px;
+  min-height: 450px;
 }
 
 #footer_wrap {
-  background: #212121;
-}
-
-ul.menu li {
-  display: inline-block;
-  padding-right: 20px;
-  font-size: 18px;
-  border-right: 1px solid;
-  color: white; 
-}
-
-ul.menu li.last {
-  border-right: none;
+  background: #020659;
+  text-align: center;
 }
 
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
-
 @media screen and (max-width: 490px) {
   body {
     font-size:14px;
@@ -375,10 +304,5 @@ Small Device Styles
 
   .tagline {
     font-size: 18px;
-  }
-
-  ul.menu li {
-    padding-right: 7px;
-    padding-left: 7px;
   }
 }

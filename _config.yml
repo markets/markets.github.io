@@ -1,4 +1,2 @@
-name:           Marc Anguera Insa
-highlighter:    rouge
-analytics:      UA-41006145-1
-permalink:      /blog/:year/:month/:day/:title
+analytics:   UA-41006145-1
+permalink:   /blog/:year/:month/:day/:title

@@ -41,7 +41,7 @@ body {
   box-sizing: border-box;
   color: #112d4e;
   background: #112d4e;
-  font-size: 16px;
+  font-size: 18px;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -72,10 +72,6 @@ h4 {
 
 h5 {
   font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
 }
 
 p {
@@ -239,7 +235,7 @@ footer p {
 
 .tagline {
   color: #fff;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 300;
   display: block;
 }
@@ -267,7 +263,7 @@ Small Device Styles
 *******************************************************************************/
 @media screen and (max-width: 490px) {
   body {
-    font-size:14px;
+    font-size: 16px;
   }
 
   .inner {
@@ -293,10 +289,6 @@ Small Device Styles
 
   h5 {
     font-size: 14px;
-  }
-
-  h6 {
-    font-size: 12px;
   }
 
   code, pre {

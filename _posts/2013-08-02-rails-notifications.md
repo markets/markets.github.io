@@ -12,15 +12,15 @@ More or less this mechanism works in the following way: given a code block, when
 
 To take a first look, we're going to print all notifications into the log file. We just need to subscribe to all notifications. For do this, add this piece of code to an initializer (/config/initializers/notifications.rb):
 
-{% highlight ruby %}
+```ruby
 ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
   Rails.logger.debug("[NOTIFICATION] #{name} #{start} #{finish} #{payload}")
 end
-{% endhighlight %}
+```
 
 Restart the server and make a request. We'll see those lines in the application log:
 
-{% highlight bash %}
+```
 [NOTIFICATION] start_processing.action_controller
   2013-08-01 20:10:45 +0200 2013-08-01 20:10:45 +0200
   {
@@ -50,7 +50,7 @@ Restart the server and make a request. We'll see those lines in the application 
     :format=>:html, :method=>"GET", :path=>"/topics", :status=>200,
     :view_runtime=>121.30655800000001, :db_runtime=>1.2731360000000003
   }
-{% endhighlight %}
+```
 
 We may observe different kinds of notifications like:
 * `start_processing.action_controller`
@@ -62,16 +62,16 @@ Very useful the last one. This notification includes information such as: the pa
 
 We can subscribe for only one specific kind of notifications by filtering them. For do this, we'll pass a parameter to `subscribe` method:
 
-{% highlight ruby %}
+```ruby
 ActiveSupport::Notifications.subscribe(/action_controller/) do |*args|
   ...
 end
-{% endhighlight %}
+```
 
 Another interesting idea would be to store notifications into our database in order to manage information easily.
 
-{% highlight ruby %}
-# Assume Notification is an ActiveRecord class.
+```ruby
+# assuming Notification is an existing ActiveRecord class
 ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
   notification_params = {
     name: name,
@@ -81,7 +81,7 @@ ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
   }
   Notification.create(notification_params)
 end
-{% endhighlight %}
+```
 
 We can implement a more complex solutions. For example: store data to Memcached or Redis, and bulk it into a persisted storage periodically. Any good idea across your mind.
 
@@ -89,7 +89,7 @@ We can implement a more complex solutions. For example: store data to Memcached 
 
 We can create our own notifications and subscribe to them as well. For example:
 
-{% highlight ruby %}
+```ruby
 # create custom notification
 ActiveSupport::Notifications.instrument('render') do
   ...
@@ -99,7 +99,7 @@ end
 ActiveSupport::Notifications.subscribe('render') do |*args|
   ...
 end
-{% endhighlight %}
+```
 
 ### Final words
 

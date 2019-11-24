@@ -48,29 +48,30 @@ Alternatively, you can simply copy [this file](https://github.com/markets/jekyll
 
 Example usage:
 
-{% highlight html %}
 {% raw %}
+```html
 <span>{{ page.date | timeago }}</span>
 <h2>{{ page.title }}</h2>
 
 <div class="post">
   {{ content }}
 </div>
+```
 {% endraw %}
-{% endhighlight %}
 
 You are able to personalize the level of detail (from 1 up to 4, 2 by default) by passing a parameter:
-{% highlight html %}
+
 {% raw %}
+```html
 <span>{{ page.date | timeago: 4 }}</span>
+```
 {% endraw %}
-{% endhighlight %}
 
 ## Localization
 
 The plugin allows you to modify the strings needed to build the time ago sentences. For do this, you must add some extra keys to your `_config.yml`. You can simply copy them from [this example file](https://github.com/markets/jekyll-timeago/blob/master/_config.yml.example) and translate it to your site's language. Sample:
 
-{% highlight yaml %}
+```yaml
 jekyll_timeago:
   today: 'today'
   yesterday: 'yesterday'
@@ -88,13 +89,13 @@ jekyll_timeago:
   week: 'week'
   days: 'days'
   day: 'day'
-{% endhighlight %}
+```
 
 ## Output Examples
 
 Default behavior:
 
-{% highlight ruby %}
+```ruby
 > timeago(Date.today)
 => "today"
 > timeago(Date.today - 1.day)
@@ -111,11 +112,11 @@ Default behavior:
 => "in 1 week"
 > timeago(Date.today + 1000.days)
 => "in 2 years and 8 months"
-{% endhighlight %}
+```
 
 You can modify the level of detail to get higher or lower granularity:
 
-{% highlight ruby %}
+```ruby
 > timeago(Date.today - 500.days) # default
 => "1 year and 4 months ago"
 > timeago(Date.today - 500.days, 3)
@@ -124,8 +125,8 @@ You can modify the level of detail to get higher or lower granularity:
 => "1 year, 4 months, 1 week and 4 days ago"
 > timeago(Date.today - 500.days, 1)
 => "1 year ago"
-{% endhighlight %}
+```
 
 ### Contributing
 
-Any kind of idea, bug or comment are welcome. Please, follow up in [GitHub](https://github.com/markets/unscoped_associations)
+Any kind of idea, bug or comment are welcome. Please, follow up in [GitHub](https://github.com/markets/jekyll-timeago).

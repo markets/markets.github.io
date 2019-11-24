@@ -20,7 +20,7 @@ When using `super`, be careful with syntax. Called with omitted arguments (witho
 
 Example how `super` performs in different cases:
 
-{% highlight ruby %}
+```ruby
 class A
   def initialize(*args)
     puts args.inspect
@@ -37,4 +37,4 @@ end
 B.new('foo')
 # => []
 # => ["foo"]
-{% endhighlight %}
+```

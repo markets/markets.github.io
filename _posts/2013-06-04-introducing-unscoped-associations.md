@@ -27,7 +27,7 @@ gem 'unscoped_associations'
 
 From now on you are able to use `unscoped` option in your association definitions. Basic usage example:
 
-{% highlight ruby %}
+```ruby
 class User < ActiveRecord::Base
   has_many :comments # or , unscoped: false
   has_many :all_comments, class_name: 'Comment',
@@ -49,7 +49,7 @@ end
 @user.all_comments # => return all comments skipping default_scope
 @user.last_comment # => return last comment skipping default_scope
 @comment.user # => return user w/o taking account 'active' flag
-{% endhighlight %}
+```
 
 ### Status
 
@@ -57,11 +57,11 @@ Tested on Rails 3.x series and Rails 4.0.0. Originally thought and built for Rai
 
 NOTE: Rails 4 introduces some updates (and more planned for upcoming releases) related to this part. For example, in Rails 4, you are able to customize associations using a scope block, so you can skip `default_scope`:
 
-{% highlight ruby %}
+```ruby
 class User < ActiveRecord::Base
   has_many :all_comments, -> { where public: [true, flase] }, class_name: 'Comment'
 end
-{% endhighlight %}
+```
 
 Anyway, you can use `unscoped` option, if you prefer.
 

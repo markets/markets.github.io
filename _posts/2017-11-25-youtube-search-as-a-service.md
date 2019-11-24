@@ -22,7 +22,7 @@ The CLI allows you to search videos without leaving the terminal. Install global
 > npm install -g suchtube
 ```
 
-*NOTE* You we'll need a YouTube Data API key loaded in your ENV (`SUCHTUBE_YOUTUBE_DATA_API_V3`). You can get one easily by creating a project [here](https://console.developers.google.com/projectcreate).
+**NOTE** You we'll need a YouTube Data API key loaded in your ENV (`SUCHTUBE_YOUTUBE_DATA_API_V3`). You can get one easily by creating a project [here](https://console.developers.google.com/projectcreate).
 
 Usage:
 

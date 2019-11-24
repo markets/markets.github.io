@@ -18,7 +18,7 @@ The `backup` gem provides a very nice set of features:
 
 Backup model example (MySQL, Amazon, Gzip and email notifications):
 
-{% highlight ruby %}
+```ruby
 Model.new(:my_backup, 'My backup description') do
   database MySQL do |db|
     db.name     = "database_name"
@@ -52,20 +52,20 @@ Model.new(:my_backup, 'My backup description') do
     mail.authentication = "plain"
   end
 end
-{% endhighlight %}
+```
 
 Perform the backup with the following command:
 
-{% highlight bash %}
+```
 > backup perform --trigger my_backup
-{% endhighlight %}
+```
 
 You can also schedule your backups with a cron job (for example using the `whenever` gem) and you'll achieve a simple and effective solution:
 
-{% highlight ruby %}
+```ruby
 every 1.day, :at => '1:00 am' do
   command "backup perform --trigger my_backup"
 end
-{% endhighlight %}
+```
 
 Hope this can help you!

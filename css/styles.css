@@ -23,20 +23,6 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-ol, ul {
-  list-style: square;
-  margin-left: 20px;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a:focus {
-  outline: none;
-}
-
 body {
   box-sizing: border-box;
   color: #112d4e;
@@ -74,20 +60,20 @@ h5 {
   font-size: 18px;
 }
 
-p {
-  margin: 10px 0 15px 0;
-}
-
-small {
-  font-size: 12px;
-}
-
 a {
   text-decoration: none;
 }
 
-em {
-  font-style: italic;
+a:focus {
+  outline: none;
+}
+
+p {
+  margin: 15px 0 15px 0;
+}
+
+small {
+  font-size: 12px;
 }
 
 strong {
@@ -96,9 +82,8 @@ strong {
 
 pre, code {
   width: 100%;
-  color: #112d4e;
   background-color: #fff;
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: Monaco, "Lucida Console", Terminal, monospace;
   font-size: 14px;
   border-radius: 2px;
   -moz-border-radius: 2px;
@@ -126,62 +111,10 @@ pre code {
   box-shadow: none;
 }
 
-blockquote {
-  color: #666;
-  margin-bottom: 20px;
-  padding: 0 0 0 20px;
-  border-left: 3px solid #bbb;
-}
-
-ul, ol, dl {
+ul {
+  list-style: square;
+  margin-left: 20px;
   margin-bottom: 15px
-}
-
-ol li {
-  list-style: decimal inside;
-  padding-left: 20px;
-}
-
-dl dt {
-  font-weight: bold;
-}
-
-dl dd {
-  padding-left: 20px;
-  font-style: italic;
-}
-
-dl p {
-  padding-left: 20px;
-  font-style: italic;
-}
-
-table {
-  border: 1px solid #373737;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-th {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 10px;
-  background: #373737;
-  color: #fff;
-}
-
-td {
-  padding: 10px;
-  border: 1px solid #373737;
-}
-
-form {
-  background: #f2f2f2;
-  padding: 20px;
-}
-
-img {
-  width: 100%;
-  max-width: 100%;
 }
 
 #main_content a {
@@ -195,19 +128,10 @@ img {
 
 header a {
   color: white;
-  padding-bottom: 2px;
-}
-
-footer a {
-  color: white;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 footer p {
-  color: #f2f2f2;
+  color: white;
 }
 
 .outer {
@@ -246,12 +170,11 @@ footer p {
 }
 
 #footer_wrap {
-  background: #112d4e;
   text-align: center;
 }
 
 .post {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .txt-center {

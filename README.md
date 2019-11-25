@@ -1,6 +1,6 @@
 # Personal site and blog
 
-Visit me at :point_right: [marcanguera.net](marcanguera.net)
+Visit me at :point_right: [marcanguera.net](https://marcanguera.net)
 
 ## Setup
 

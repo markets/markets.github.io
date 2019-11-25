@@ -1,26 +1,9 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
 }
 
 body {
@@ -117,6 +100,13 @@ ul {
   margin-bottom: 15px
 }
 
+.inner {
+  position: relative;
+  max-width: 640px;
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
 #main_content a {
   color: #112d4e;
   font-weight: bold;
@@ -126,50 +116,28 @@ ul {
   text-decoration: underline;
 }
 
-header a {
-  color: white;
-}
-
-footer p {
-  color: white;
-}
-
-.outer {
-  width: 100%;
-}
-
-.inner {
-  position: relative;
-  max-width: 640px;
-  padding: 20px 10px;
-  margin: 0 auto;
-}
-
-#header_wrap {
-  background: #112d4e;
-  color: white;
-}
-
-.main_header {
-  margin: 0;
-  color: #fff;
-  font-size: 44px;
-  font-weight: 700;
-}
-
-.tagline {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 300;
-  display: block;
-}
-
 #main_content_wrap {
   background: #f2f2f2;
   min-height: 450px;
 }
 
-#footer_wrap {
+header {
+  background: #112d4e;
+  color: #f2f2f2;
+}
+
+header a {
+  color: #f2f2f2;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+}
+
+.main_header {
+  font-size: 44px;
+  font-weight: 700;
+}
+
+footer {
+  color: #f2f2f2;
   text-align: center;
 }
 
@@ -222,9 +190,5 @@ Small Device Styles
 
   .main_header {
     font-size: 34px;
-  }
-
-  .tagline {
-    font-size: 18px;
   }
 }

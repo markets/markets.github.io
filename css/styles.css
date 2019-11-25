@@ -16,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5 {
   margin: 5px 0;
   font-weight: 700;
   font-family: 'Merriweather', Helvetica, Arial, sans-serif;
@@ -129,6 +129,10 @@ header {
 header a {
   color: #f2f2f2;
   font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+}
+
+.nav {
+  font-size: 20px;
 }
 
 .main_header {

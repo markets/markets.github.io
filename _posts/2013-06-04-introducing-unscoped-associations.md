@@ -4,11 +4,16 @@ title:  Introducing Unscoped Associations
 date:   2013-06-04
 ---
 
-Ruby on Rails is a great framework with a lot of built-in options and customizations. One of them is the ability to collect instances of a particular class using `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected.
+Ruby on Rails is a great framework with a lot of built-in options and customizations, specially regarding the data/models layer (Active Record). One of them is the ability to collect instances of a particular class using a `default_scope`. Very useful to collect "scoped" data by default, but pulling objects via associations is also affected, leading to weird behavior (think in "soft deletes").
 
-Have you ever needed to skip (for some strange reasons) the `default_scope`? This library allows you to do it easily.
+This library allows you to easily skip the `default_scope` when navigating through your associations:
+
+```
+belongs_to :user, unscoped: true
+```
 
 Supported associations:
+
 * `:belongs_to`
 * `:has_one`
 * `:has_many`

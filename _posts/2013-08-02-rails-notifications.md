@@ -4,9 +4,11 @@ title:  "Rails Notifications: Subscribe to internal events"
 date:   2013-08-02
 ---
 
-We'll all agree that it is very useful to know how our application is performing in aim to: detect bottlenecks, generate statistics, measure metrics, etc. Rails 3 introduced a very easy mechanism to allow access for all internal notifications: `ActiveSupport::Notifications`. It's in the same way that Rails internally logs `ActiveRecord` and `ActionView`.
+We're all agree that it is very useful (and necessary) to know how our application is performing in production (detect bottlenecks, generate statistics, measure metrics, etc).
 
-More or less this mechanism works in the following way: given a code block, when the block finishes, an event is triggered to notify any report that is subscribed to it.
+Rails 3 introduced a very easy-to-use mechanism to allow access for all internal notifications: `ActiveSupport::Notifications`. In fact, it's the system that Rails uses internally to log `ActiveRecord` and `ActionView` events.
+
+More or less, this mechanism works in the following way: given a code block, when the block finishes, an event is triggered to notify any report that is subscribed to it.
 
 ### In action
 
@@ -53,12 +55,13 @@ Restart the server and make a request. We'll see those lines in the application 
 ```
 
 We may observe different kinds of notifications like:
+
 * `start_processing.action_controller`
 * `sql.active_record`
 * `render_template.action_view`
 * `process_action.action_controller`
 
-Very useful the last one. This notification includes information such as: the params, the path, the view_runtime, the db_runtime...
+Very useful the last one. This notification includes information such as: the params, the path, the view_runtime, the db_runtime ...
 
 We can subscribe for only one specific kind of notifications by filtering them. For do this, we'll pass a parameter to `subscribe` method:
 

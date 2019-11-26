@@ -4,7 +4,7 @@ title:  Download file via Ajax request
 date:   2013-07-01
 ---
 
-Everything retrieved via Ajax goes into javascript "memory" space. This is because JavaScript cannot interact with disk. That would be a security issue. Ajax is not designed to do this kind of stuff. But as always, there are some tricks ... Here is a simple approach of how to get it in a Ruby on Rails based application.
+Everything retrieved via Ajax goes into javascript "memory" space. This is because JavaScript can't interact with disk. That would be a security issue. Ajax is not designed to do this kind of stuff. But as always, there are some tricks ... Here is a simple approach of how to get it in a Ruby on Rails based application.
 
 ### Scenario
 

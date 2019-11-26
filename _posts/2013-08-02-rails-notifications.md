@@ -8,8 +8,6 @@ We're all agree that it is very useful (and necessary) to know how our applicati
 
 Rails 3 introduced a very easy-to-use mechanism to allow access for all internal notifications: `ActiveSupport::Notifications`. In fact, it's the system that Rails uses internally to log `ActiveRecord` and `ActionView` events.
 
-More or less, this mechanism works in the following way: given a code block, when the block finishes, an event is triggered to notify any report that is subscribed to it.
-
 ### In action
 
 To take a first look, we're going to print all notifications into the log file. We just need to subscribe to all notifications. For do this, add this piece of code to an initializer (/config/initializers/notifications.rb):

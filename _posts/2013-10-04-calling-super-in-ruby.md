@@ -38,3 +38,5 @@ B.new('foo')
 # => []
 # => ["foo"]
 ```
+
+Be careful when calling `super`!

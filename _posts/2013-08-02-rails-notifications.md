@@ -6,7 +6,7 @@ date:   2013-08-02
 
 We're all agree that it is very useful (and necessary) to know how our application is performing in production (detect bottlenecks, generate statistics, measure metrics, etc).
 
-Rails 3 introduced a very easy-to-use mechanism to allow access for all internal notifications: `ActiveSupport::Notifications`. In fact, it's the system that Rails uses internally to log `ActiveRecord` and `ActionView` events.
+Rails 3 introduced a very easy-to-use mechanism to allow access for all internal notifications: `ActiveSupport::Notifications`. In fact, it's the system that Rails itself uses internally to log `ActiveRecord` and `ActionView` events.
 
 ### In action
 
@@ -34,7 +34,7 @@ Restart the server and make a request. We'll see those lines in the application 
     :sql=>"SELECT  `topics`.* FROM `topics` LIMIT 10 OFFSET 0",
     :name=>"Topic Load", :connection_id=>92001860, :binds=>[]
   }
-[NOTIFICATION] !render_template.action_view
+[NOTIFICATION] render_template.action_view
   2013-08-01 20:10:45 +0200 2013-08-01 20:10:45 +0200
   {
     :virtual_path=>"topics/index"
@@ -52,16 +52,16 @@ Restart the server and make a request. We'll see those lines in the application 
   }
 ```
 
-We may observe different kinds of notifications like:
+We can observe different kinds of notifications:
 
 * `start_processing.action_controller`
 * `sql.active_record`
 * `render_template.action_view`
 * `process_action.action_controller`
 
-Very useful the last one. This notification includes information such as: the params, the path, the view_runtime, the db_runtime ...
+Very useful the last one. That notification includes information such as: the params, the path, the view_runtime, the db_runtime ...
 
-We can subscribe for only one specific kind of notifications by filtering them. For do this, we'll pass a parameter to `subscribe` method:
+We can subscribe to only one specific type of notifications by filtering them. To accomplish this, we'll pass a parameter to `subscribe` method:
 
 ```ruby
 ActiveSupport::Notifications.subscribe(/action_controller/) do |*args|
@@ -69,7 +69,7 @@ ActiveSupport::Notifications.subscribe(/action_controller/) do |*args|
 end
 ```
 
-Another interesting idea would be to store notifications into our database in order to manage information easily.
+Another interesting idea would be to store notifications into your database in order to manage information easily.
 
 ```ruby
 # assuming Notification is an existing ActiveRecord class
@@ -84,7 +84,7 @@ ActiveSupport::Notifications.subscribe do |name, start, finish, id, payload|
 end
 ```
 
-We can implement a more complex solutions. For example: store data to Memcached or Redis, and bulk it into a persisted storage periodically. Any good idea across your mind.
+We can even implement more complex solutions. For example: store data to Memcached or Redis, and bulk it into a persisted storage periodically. Any good idea across your mind!
 
 ### Create custom notifications
 
@@ -104,6 +104,6 @@ end
 
 ### Final words
 
-There are some professional and well known tools to monitor our applications in production environment, like [RPM New Relic](https://newrelic.com), [Librato Metrics](https://metrics.librato.com/), [Riemann](https://riemann.io/). Totally Right, full solutions and very liked, but this API helps us to build for example: a custom case study, a custom logging, a self-made usage statistics, alerting, etc. Cool!
+There are some professional and well known tools to monitor our applications in production environments, like [RPM New Relic](https://newrelic.com), [Librato Metrics](https://metrics.librato.com/), [Riemann](https://riemann.io/). Totally right, full solutions with lots of options, but this API helps us to build for example: a custom case study, a custom logging, a self-made usage statistics, alerting, etc. Cool!
 
-Be sure to check out the official [documentation](http://api.rubyonrails.org/classes/ActiveSupport/Notifications.html) for further information.
+Be sure to check out the official [documentation](https://api.rubyonrails.org/classes/ActiveSupport/Notifications.html) for further information.

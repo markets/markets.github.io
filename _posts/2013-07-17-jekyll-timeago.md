@@ -10,7 +10,7 @@ Custom and simple implementation of `timeago` date filter. Main features:
 * **Future time**
 * **Level of detail**
 
-In fact, `jekyll-timeago` is an extension of <a href="https://github.com/Shopify/liquid" target="_blank">Liquid</a> filters, so you can use it in all your Liquid templates (Octopress as well). Liquid is markup language extracted from the e-commerce platform <a href="http://www.shopify.com/" target="_blank">Shopify</a>.
+In fact, `jekyll-timeago` is an extension of <a href="https://github.com/Shopify/liquid" target="_blank">Liquid</a> filters, so you can use it in all your Liquid templates (Octopress as well). Liquid is markup language extracted from the e-commerce platform <a href="https://www.shopify.com/" target="_blank">Shopify</a>.
 
 Source code, bug tracking and updates <a href="https://github.com/markets/jekyll-timeago" target="_blank">here</a>.
 

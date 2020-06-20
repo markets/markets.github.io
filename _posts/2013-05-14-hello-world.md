@@ -10,7 +10,7 @@ Especially, I would highlight the simplicity to deploy the site. In case of usin
 
 When you are in development mode, you can run the site (task: `jekyll serve`) locally. By default is served by WEBrick, a Ruby HTTP web server.
 
-Another important point is the community behind the framework. Some people contribute directly to the core, other people implementing extensions via plugins. There is already a considerable <a href="https://jekyllrb.com/docs/plugins/">list of them</a>.
+Another important point is the big community behind the framework. Some people contribute directly to the core, other people implementing extensions via plugins. There is already a considerable <a href="https://jekyllrb.com/docs/plugins/">list of them</a>.
 
 Check the full documentation in <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> page.
 

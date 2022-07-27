@@ -16,35 +16,31 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3 {
   margin: 5px 0;
   font-weight: 700;
-  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
   letter-spacing: -1px;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 21px;
-}
-
-h5 {
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a:focus {
@@ -112,10 +108,6 @@ ul {
   font-weight: bold;
 }
 
-#main_content a:hover {
-  text-decoration: underline;
-}
-
 #main_content_wrap {
   background: #f2f2f2;
   min-height: 450px;
@@ -128,16 +120,20 @@ header {
 
 header a {
   color: #f2f2f2;
-  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
+  font-family: 'Oswald', Helvetica, Arial, sans-serif;
 }
 
 .nav {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .main_header {
   font-size: 44px;
   font-weight: 700;
+}
+
+.main_header a:hover {
+  text-decoration: none;
 }
 
 footer {
@@ -172,26 +168,6 @@ Small Device Styles
   .inner {
     min-width: 320px;
     max-width: 480px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 21px;
-  }
-
-  h4 {
-    font-size: 18px;
-  }
-
-  h5 {
-    font-size: 14px;
   }
 
   code, pre {

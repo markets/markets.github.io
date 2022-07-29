@@ -10,20 +10,10 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Fira+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="inner">
-    <h1 class="main_header">
-      <a href="/" title="Home">Marc Anguera</a>
-    </h1>
-    <div class="nav">
-      <a href="/about" title="About me">About</a> /
-      <a href="/projects" title="About me">Projects</a> /
-      <a href="/blog" title="Blog">Blog</a> /
-      <a href="/contact" title="Contact me">Contact</a>
-    </div>
-  </header>
+  {% include header.html %}
 
   <div id="main_content_wrap">
     <section id="main_content" class="inner">
@@ -31,10 +21,7 @@
     </section>
   </div>
 
-  <footer class="inner">
-    <p>&copy; {{ "now" | date: "%Y" }} Marc Anguera @markets</p>
-  </footer>
-
+  {% include footer.html %}
   {% include analytics.html %}
 </body>
 </html>

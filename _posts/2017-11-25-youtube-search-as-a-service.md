@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Suchtube - YouTube search as a service
+title:  "Suchtube: YouTube search as a service"
 date:   2017-11-25
 ---
 

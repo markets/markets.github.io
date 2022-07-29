@@ -8,7 +8,7 @@ Ruby on Rails is a great framework with a lot of built-in options and customizat
 
 This library allows you to easily skip the `default_scope` when navigating through your associations:
 
-```
+```ruby
 belongs_to :user, unscoped: true
 ```
 
@@ -24,7 +24,7 @@ More information, source and follow up [here](https://github.com/markets/unscope
 
 Add this line to your Gemfile:
 
-```
+```ruby
 gem 'unscoped_associations'
 ```
 

@@ -30,13 +30,13 @@ gems: [jekyll-timeago]
 
 Add this gem to your `Gemfile` and run `bundle`:
 
-```
+```ruby
 gem 'jekyll-timeago'
 ```
 
 To use this filter, just add the following to the top of another plugin (found under `_plugins/`):
 
-```
+```ruby
 require 'jekyll/timeago'
 ```
 

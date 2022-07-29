@@ -1,8 +1,8 @@
 /* Variables */
 :root {
-  --primary-color: #195a7f;
   --white: #f2f2f2;
   --black: #333333;
+  --primary-color: #195a7f;
   --body-font: 'Fira Sans', Helvetica, Arial, sans-serif;
   --headings-font: 'Oswald', Helvetica, Arial, sans-serif;
   --box-shadow: 0 0 10px rgba(0, 0, 0, .1);
@@ -48,10 +48,6 @@ h3 {
 
 a {
   text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 a:focus {
@@ -107,15 +103,21 @@ pre code {
   margin: 0 auto;
 }
 
-#main_content a {
-  color: var(--primary-color);
-  font-weight: bold;
-}
-
 #main_content_wrap {
   background: var(--white);
   min-height: 450px;
   padding-bottom: 50px;
+}
+
+#main_content a {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+#main_content a:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 
 /* Header */
@@ -132,13 +134,12 @@ header a {
   font-size: 25px;
 }
 
-.main_header {
-  font-size: 50px;
-  font-weight: 700;
+.nav a:hover {
+  text-decoration: underline;
 }
 
-.main_header a:hover {
-  text-decoration: none;
+.main_header {
+  font-size: 50px;
 }
 
 /* Footer */

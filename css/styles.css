@@ -56,11 +56,11 @@ a:focus {
 }
 
 p {
-  margin: 15px 0;
+  margin-bottom: 1em;
 }
 
 small {
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
 ul {
@@ -98,7 +98,7 @@ pre code {
 /* Main content */
 .inner {
   position: relative;
-  max-width: 650px;
+  max-width: 640px;
   padding: 20px;
   margin: 0 auto;
 }
